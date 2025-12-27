@@ -4,20 +4,12 @@
     "description": "Moderation bot with auto-expiring warnings and slash commands.",
     "link": "https://github.com/RushDev-lang/Discord-Punishment-Bot"
   },
-  {
-    "title": "Python Calculator",
-    "description": "Simple and elegant GUI calculator built with Python and Tkinter.",
-    "link": "https://github.com/YOUR_USERNAME/python-calculator"
-  },
-  {
-    "title": "Java Game",
-    "description": "2D arcade game built in Java with smooth animations and scoring system.",
-    "link": "https://github.com/YOUR_USERNAME/java-game"
-  },
+  
   {
     "title": "Portfolio Website",
     "description": "Personal portfolio website built with HTML, CSS, JS.",
-    "link": "https://github.com/YOUR_USERNAME/portfolio"
+    "link": "https://github.com/RushDev-lang/Portfolio"
   }
 ]
+
 
