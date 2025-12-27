@@ -1,0 +1,62 @@
+/* ====================== General Reset ====================== */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+body{overflow-x:hidden;background-color:#0a0a0a;color:#e5e5e5;line-height:1.6;position:relative;}
+
+/* ====================== Hero ====================== */
+.hero{min-height:90vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;overflow:hidden;background:rgba(10,10,20,0.2);backdrop-filter:blur(8px);border-radius:20px;margin:20px;}
+.hero h1{font-size:3.5rem;color:#a855f7;text-shadow:0 0 20px #a855f7,0 0 50px #8b5cf6;animation:glowPulse 2.5s ease-in-out infinite alternate;}
+.hero p{margin-top:12px;color:#9ca3af;text-shadow:0 0 10px #a855f7;font-size:1.3rem;}
+@keyframes glowPulse{0%{text-shadow:0 0 20px #a855f7,0 0 50px #8b5cf6;}100%{text-shadow:0 0 35px #a855f7,0 0 90px #8b5cf6;}}
+
+/* ====================== Logo / Avatar ====================== */
+.hero-logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #a855f7;
+  box-shadow: 0 0 25px #a855f7, 0 0 50px #8b5cf6;
+  margin-bottom: 20px;
+  animation: glowPulse 2.5s ease-in-out infinite alternate;
+}
+
+/* ====================== Buttons ====================== */
+.buttons{margin-top:30px;display:flex;gap:20px;}
+.buttons a{text-decoration:none;color:#fff;border:1px solid #a855f7;padding:14px 28px;border-radius:16px;background:linear-gradient(145deg,#8b5cf6,#a855f7);box-shadow:0 0 30px #a855f7,0 0 60px #8b5cf6;transition:all 0.4s ease;}
+.buttons a:hover{transform:scale(1.12);box-shadow:0 0 60px #a855f7,0 0 120px #8b5cf6;background:linear-gradient(145deg,#a855f7,#8b5cf6);}
+
+/* ====================== Scroll Indicator Vertical ====================== */
+.scroll-down-vertical{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;gap:8px;z-index:10;}
+.scroll-down-vertical span{width:12px;height:12px;border-left:3px solid #a855f7;border-bottom:3px solid #a855f7;transform:rotate(-45deg);opacity:1;animation:scroll-vertical-down 1.5s infinite;}
+.scroll-down-vertical span:nth-child(1){animation-delay:0s;}
+.scroll-down-vertical span:nth-child(2){animation-delay:.15s;}
+.scroll-down-vertical span:nth-child(3){animation-delay:.3s;}
+.scroll-down-vertical span:nth-child(4){animation-delay:.45s;}
+.scroll-down-vertical span:nth-child(5){animation-delay:.6s;}
+@keyframes scroll-vertical-down{0%{transform:rotate(-45deg) translateY(0);opacity:0;}50%{transform:rotate(-45deg) translateY(10px);opacity:1;}100%{transform:rotate(-45deg) translateY(20px);opacity:0;}}
+
+/* ====================== Sections ====================== */
+.section{max-width:1100px;margin:100px auto;padding:60px 30px;border-radius:28px;backdrop-filter:blur(12px);background:rgba(10,10,20,0.38);border:1px solid rgba(168,85,247,0.3);box-shadow:0 0 60px rgba(168,85,247,0.25);}
+
+/* ====================== Cards ====================== */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;}
+.card{background:linear-gradient(145deg, rgba(25,10,50,0.85), rgba(50,10,70,0.85));border-radius:20px;padding:28px;border:1px solid rgba(168,85,247,0.5);box-shadow:0 0 35px rgba(168,85,247,0.35);color:#fff;transition:all 0.4s ease;position:relative;overflow:hidden;}
+.card:hover{transform:translateY(-10px) scale(1.05);box-shadow:0 0 70px rgba(168,85,247,0.55),0 0 100px #8b5cf6;}
+.card h3{color:#a855f7;margin-bottom:12px;text-shadow:0 0 12px #a855f7;}
+.card p{color:#e5e5e5;margin-bottom:15px;text-shadow:0 0 10px #8b5cf6;}
+.card a{color:#8b5cf6;font-weight:600;text-decoration:none;text-shadow:0 0 6px #8b5cf6;}
+.card a:hover{text-shadow:0 0 20px #a855f7,0 0 35px #8b5cf6;}
+
+/* ====================== Skills ====================== */
+.skill{text-align:center;font-weight:600;background:linear-gradient(145deg,#a855f7,#8b5cf6);border-radius:16px;padding:18px;box-shadow:0 0 30px #a855f7,0 0 50px #8b5cf6;transition:0.3s;}
+.skill:hover{transform:scale(1.08);box-shadow:0 0 60px #a855f7,0 0 90px #8b5cf6;}
+
+/* ====================== Footer ====================== */
+footer{text-align:center;padding:40px;color:#6b7280;text-shadow:0 0 5px #8b5cf6;}
+
+/* ====================== Scroll Reveal ====================== */
+.reveal{opacity:0;transform:translateY(30px);transition:all 0.6s ease;}
+.reveal.active{opacity:1;transform:translateY(0);}
+.delay{transition-delay:.2s;}.delay2{transition-delay:.4s;}
+
+/* ====================== Responsive ====================== */
+@media(max-width:600px){.hero h1{font-size:2.4rem;}.hero p{font-size:1.1rem;}.buttons a{padding:10px 22px;}.hero-logo{width:80px;height:80px;}}
